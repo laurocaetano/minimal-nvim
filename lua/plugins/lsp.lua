@@ -6,5 +6,8 @@ return {
   },
   {
     "fatih/vim-go",
-  }
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+  },
 }

@@ -4,9 +4,9 @@ require('config.lazy')
 require('config.lsp')
 require('config.autocomplete')
 
--- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-require'lspconfig'.gopls.setup{
-  capabilities = capabilities
-}
+-- Telescope maps
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
