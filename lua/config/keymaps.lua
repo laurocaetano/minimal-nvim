@@ -10,6 +10,7 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = tr
 -- Manage buffers
 vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>")
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>")
+vim.keymap.set("n", "<Leader>bd", "<cmd>BufferClose<cr>")
 vim.keymap.set("n", "<C-n>", function()
   require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
 end)
